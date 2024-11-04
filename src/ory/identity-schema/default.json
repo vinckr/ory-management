@@ -54,7 +54,7 @@
             }
           }
         },
-        "newsletter": {
+        "compliance": {
           "type": "boolean",
           "title": "Here is some potentially pretty long text that you can customize to your use case and requirements."
         }
