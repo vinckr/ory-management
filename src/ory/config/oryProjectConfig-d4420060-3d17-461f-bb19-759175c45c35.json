@@ -1,0 +1,553 @@
+{
+  "id": "d4420060-3d17-461f-bb19-759175c45c35",
+  "revision_id": "be12f5d6-7892-4519-999f-26c9b53101b1",
+  "slug": "funny-bohr-5pcjj09ww5",
+  "services": {
+    "identity": {
+      "config": {
+        "cookies": {
+          "domain": "funny-bohr-5pcjj09ww5.projects.oryapis.com",
+          "path": "/",
+          "same_site": "Lax"
+        },
+        "courier": {
+          "smtp": {
+            "from_name": "example via Ory"
+          },
+          "templates": {
+            "login_code": {
+              "valid": {
+                "email": {
+                  "body": {}
+                },
+                "sms": {
+                  "body": {}
+                }
+              }
+            },
+            "recovery": {
+              "invalid": {
+                "email": {
+                  "body": {}
+                }
+              },
+              "valid": {
+                "email": {
+                  "body": {}
+                }
+              }
+            },
+            "recovery_code": {
+              "invalid": {
+                "email": {
+                  "body": {}
+                }
+              },
+              "valid": {
+                "email": {
+                  "body": {}
+                }
+              }
+            },
+            "registration_code": {
+              "valid": {
+                "email": {
+                  "body": {}
+                },
+                "sms": {
+                  "body": {}
+                }
+              }
+            },
+            "verification": {
+              "invalid": {
+                "email": {
+                  "body": {}
+                }
+              },
+              "valid": {
+                "email": {
+                  "body": {}
+                }
+              }
+            },
+            "verification_code": {
+              "invalid": {
+                "email": {
+                  "body": {}
+                }
+              },
+              "valid": {
+                "email": {
+                  "body": {}
+                },
+                "sms": {
+                  "body": {}
+                }
+              }
+            }
+          }
+        },
+        "feature_flags": {
+          "cacheable_sessions": false,
+          "cacheable_sessions_max_age": "2m30s",
+          "faster_session_extend": true,
+          "use_continue_with_transitions": true
+        },
+        "identity": {
+          "default_schema_id": "preset://username",
+          "schemas": [
+            {
+              "id": "preset://username",
+              "url": "base64://ewogICIkaWQiOiAiaHR0cHM6Ly9zY2hlbWFzLm9yeS5zaC9wcmVzZXRzL2tyYXRvcy9pZGVudGl0eS51c2VybmFtZS5zY2hlbWEuanNvbiIsCiAgIiRzY2hlbWEiOiAiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNy9zY2hlbWEjIiwKICAidGl0bGUiOiAiUGVyc29uIiwKICAidHlwZSI6ICJvYmplY3QiLAogICJwcm9wZXJ0aWVzIjogewogICAgInRyYWl0cyI6IHsKICAgICAgInR5cGUiOiAib2JqZWN0IiwKICAgICAgInByb3BlcnRpZXMiOiB7CiAgICAgICAgInVzZXJuYW1lIjogewogICAgICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgICAgICJ0aXRsZSI6ICJVc2VybmFtZSIsCiAgICAgICAgICAibWF4TGVuZ3RoIjogMTAwLAogICAgICAgICAgIm9yeS5zaC9rcmF0b3MiOiB7CiAgICAgICAgICAgICJjcmVkZW50aWFscyI6IHsKICAgICAgICAgICAgICAicGFzc3dvcmQiOiB7CiAgICAgICAgICAgICAgICAiaWRlbnRpZmllciI6IHRydWUKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICJ3ZWJhdXRobiI6IHsKICAgICAgICAgICAgICAgICJpZGVudGlmaWVyIjogdHJ1ZQogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgInRvdHAiOiB7CiAgICAgICAgICAgICAgICAiYWNjb3VudF9uYW1lIjogdHJ1ZQogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgInBhc3NrZXkiOiB7CiAgICAgICAgICAgICAgICAiZGlzcGxheV9uYW1lIjogdHJ1ZQogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfSwKICAgICAgInJlcXVpcmVkIjogWwogICAgICAgICJ1c2VybmFtZSIKICAgICAgXSwKICAgICAgImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjogZmFsc2UKICAgIH0KICB9Cn0K"
+            }
+          ]
+        },
+        "oauth2_provider": {
+          "override_return_to": true
+        },
+        "preview": {
+          "default_read_consistency_level": "strong"
+        },
+        "security": {
+          "account_enumeration": {
+            "mitigate": true
+          }
+        },
+        "selfservice": {
+          "allowed_return_urls": [
+            "https://funny-bohr-5pcjj09ww5.projects.oryapis.com",
+            "/ui/logout",
+            "/ui/consent",
+            "/ui/welcome",
+            "/ui/sessions",
+            "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/error",
+            "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/login",
+            "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/recovery",
+            "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/settings",
+            "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/registration",
+            "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/verification"
+          ],
+          "default_browser_return_url": "/ui/welcome",
+          "flows": {
+            "error": {
+              "ui_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/error"
+            },
+            "login": {
+              "after": {
+                "code": {
+                  "hooks": []
+                },
+                "hooks": [],
+                "lookup_secret": {
+                  "hooks": []
+                },
+                "oidc": {
+                  "hooks": []
+                },
+                "passkey": {
+                  "hooks": []
+                },
+                "password": {
+                  "hooks": []
+                },
+                "totp": {
+                  "hooks": []
+                },
+                "webauthn": {
+                  "hooks": []
+                }
+              },
+              "before": {
+                "hooks": []
+              },
+              "style": "unified",
+              "ui_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/login"
+            },
+            "logout": {
+              "after": {}
+            },
+            "recovery": {
+              "after": {
+                "hooks": []
+              },
+              "before": {
+                "hooks": []
+              },
+              "enabled": false,
+              "notify_unknown_recipients": false,
+              "ui_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/recovery",
+              "use": "code"
+            },
+            "registration": {
+              "after": {
+                "code": {
+                  "hooks": [
+                    {
+                      "hook": "session"
+                    }
+                  ]
+                },
+                "hooks": [],
+                "oidc": {
+                  "hooks": [
+                    {
+                      "hook": "session"
+                    }
+                  ]
+                },
+                "passkey": {
+                  "hooks": [
+                    {
+                      "hook": "session"
+                    }
+                  ]
+                },
+                "password": {
+                  "hooks": []
+                },
+                "webauthn": {
+                  "hooks": [
+                    {
+                      "hook": "session"
+                    }
+                  ]
+                }
+              },
+              "before": {
+                "hooks": []
+              },
+              "enable_legacy_one_step": true,
+              "login_hints": true,
+              "ui_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/registration"
+            },
+            "settings": {
+              "after": {
+                "hooks": [],
+                "lookup_secret": {
+                  "hooks": []
+                },
+                "oidc": {
+                  "hooks": []
+                },
+                "passkey": {
+                  "hooks": []
+                },
+                "password": {
+                  "hooks": []
+                },
+                "profile": {
+                  "hooks": []
+                },
+                "totp": {
+                  "hooks": []
+                },
+                "webauthn": {
+                  "hooks": []
+                }
+              },
+              "before": {
+                "hooks": []
+              },
+              "privileged_session_max_age": "15m0s",
+              "required_aal": "highest_available",
+              "ui_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/settings"
+            },
+            "verification": {
+              "after": {
+                "hooks": []
+              },
+              "before": {
+                "hooks": []
+              },
+              "enabled": false,
+              "notify_unknown_recipients": false,
+              "ui_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/ui/verification",
+              "use": "code"
+            }
+          },
+          "methods": {
+            "b2b": {
+              "config": {
+                "organizations": []
+              }
+            },
+            "code": {
+              "config": {
+                "missing_credential_fallback_enabled": true
+              }
+            },
+            "link": {
+              "config": {
+                "base_url": ""
+              }
+            },
+            "lookup_secret": {},
+            "oidc": {
+              "config": {
+                "providers": []
+              },
+              "enabled": false
+            },
+            "passkey": {
+              "config": {
+                "rp": {
+                  "display_name": "example",
+                  "id": "funny-bohr-5pcjj09ww5.projects.oryapis.com",
+                  "origins": [
+                    "https://funny-bohr-5pcjj09ww5.projects.oryapis.com"
+                  ]
+                }
+              }
+            },
+            "password": {
+              "config": {}
+            },
+            "profile": {},
+            "totp": {
+              "config": {
+                "issuer": "example"
+              }
+            },
+            "webauthn": {
+              "config": {
+                "passwordless": false,
+                "rp": {
+                  "display_name": "example",
+                  "id": "funny-bohr-5pcjj09ww5.projects.oryapis.com",
+                  "origins": [
+                    "https://funny-bohr-5pcjj09ww5.projects.oryapis.com"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "serve": {
+          "admin": {
+            "base_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/",
+            "request_log": {
+              "disable_for_health": true
+            }
+          },
+          "public": {
+            "base_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/",
+            "cors": {
+              "enabled": false
+            },
+            "request_log": {
+              "disable_for_health": true
+            }
+          }
+        },
+        "session": {
+          "cookie": {
+            "domain": "funny-bohr-5pcjj09ww5.projects.oryapis.com",
+            "name": "ory_session_funnybohr5pcjj09ww5",
+            "path": "/",
+            "same_site": "Lax"
+          },
+          "lifespan": "72h0m0s",
+          "whoami": {
+            "required_aal": "highest_available",
+            "tokenizer": {
+              "templates": {}
+            }
+          }
+        }
+      }
+    },
+    "permission": {
+      "config": {
+        "namespaces": []
+      }
+    },
+    "oauth2": {
+      "config": {
+        "clients": {
+          "http": {
+            "disallow_private_ip_ranges": true
+          }
+        },
+        "dev": true,
+        "hsm": {
+          "enabled": false
+        },
+        "oauth2": {
+          "client_credentials": {
+            "default_grant_allowed_scope": false
+          },
+          "exclude_not_before_claim": false,
+          "expose_internal_errors": true,
+          "grant": {
+            "jwt": {
+              "iat_optional": false,
+              "jti_optional": false,
+              "max_ttl": "720h0m0s"
+            }
+          },
+          "hashers": {
+            "algorithm": "pbkdf2",
+            "pbkdf2": {
+              "iterations": 10000
+            }
+          },
+          "pkce": {
+            "enforced": false,
+            "enforced_for_public_clients": false
+          },
+          "session": {
+            "encrypt_at_rest": true
+          }
+        },
+        "oidc": {
+          "dynamic_client_registration": {
+            "enabled": false
+          },
+          "subject_identifiers": {}
+        },
+        "serve": {
+          "admin": {
+            "cors": {
+              "allow_credentials": true,
+              "allowed_headers": [
+                "Accept",
+                "Content-Type",
+                "Content-Length",
+                "Accept-Language",
+                "Content-Language",
+                "Authorization"
+              ],
+              "allowed_methods": [
+                "POST",
+                "GET",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "CONNECT",
+                "HEAD",
+                "OPTIONS",
+                "TRACE"
+              ],
+              "debug": false,
+              "enabled": false,
+              "exposed_headers": [
+                "Cache-Control",
+                "Expires",
+                "Last-Modified",
+                "Pragma",
+                "Content-Length",
+                "Content-Language",
+                "Content-Type"
+              ],
+              "max_age": 0
+            },
+            "tls": {
+              "enabled": false
+            }
+          },
+          "cookies": {
+            "domain": "funny-bohr-5pcjj09ww5.projects.oryapis.com",
+            "names": {
+              "consent_csrf": "ory_oauth2_consent_csrf_funnybohr5pcjj09ww5",
+              "login_csrf": "ory_oauth2_login_csrf_funnybohr5pcjj09ww5",
+              "session_csrf": "ory_oauth2_session_csrf_funnybohr5pcjj09ww5"
+            },
+            "same_site_legacy_workaround": false,
+            "same_site_mode": "Lax",
+            "secure": true
+          },
+          "public": {
+            "cors": {
+              "allow_credentials": true,
+              "allowed_headers": [
+                "Accept",
+                "Content-Type",
+                "Content-Length",
+                "Accept-Language",
+                "Content-Language",
+                "Authorization"
+              ],
+              "allowed_methods": [
+                "POST",
+                "GET",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "CONNECT",
+                "HEAD",
+                "OPTIONS",
+                "TRACE"
+              ],
+              "debug": false,
+              "enabled": false,
+              "exposed_headers": [
+                "Cache-Control",
+                "Expires",
+                "Last-Modified",
+                "Pragma",
+                "Content-Length",
+                "Content-Language",
+                "Content-Type"
+              ],
+              "max_age": 0
+            },
+            "tls": {
+              "enabled": false
+            }
+          },
+          "tls": {
+            "enabled": false
+          }
+        },
+        "strategies": {
+          "access_token": "opaque",
+          "jwt": {},
+          "scope": "wildcard"
+        },
+        "ttl": {
+          "access_token": "1h0m0s",
+          "auth_code": "30m0s",
+          "id_token": "1h0m0s",
+          "login_consent_request": "30m0s",
+          "refresh_token": "720h0m0s"
+        },
+        "urls": {
+          "consent": "/ui/consent",
+          "error": "/ui/error",
+          "login": "/ui/login",
+          "logout": "/ui/logout",
+          "post_logout_redirect": "/oauth2/fallbacks/logout/callback",
+          "registration": "/ui/registration",
+          "self": {
+            "admin": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/admin",
+            "issuer": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com",
+            "public": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com"
+          }
+        },
+        "webfinger": {
+          "jwks": {},
+          "oidc_discovery": {
+            "auth_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/oauth2/auth",
+            "jwks_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/.well-known/jwks.json",
+            "token_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/oauth2/token",
+            "userinfo_url": "https://funny-bohr-5pcjj09ww5.projects.oryapis.com/userinfo"
+          }
+        }
+      }
+    }
+  },
+  "state": "running",
+  "name": "example",
+  "workspace_id": "efcc2a16-44b6-4199-95af-887d9a58f057",
+  "environment": "dev",
+  "cors_public": {
+    "enabled": false,
+    "origins": []
+  },
+  "cors_admin": {
+    "enabled": false,
+    "origins": []
+  },
+  "home_region": "us-west"
+}

@@ -1,0 +1,65 @@
+# Node modules
+node_modules/
+
+# TypeScript build outputs
+dist/
+build/
+out/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*.local
+
+# IDE specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional coverage directory for testing frameworks like Jest
+coverage/
+
+# Optional dependency directories
+/.pnp
+.pnp.js
+
+# MacOS file
+.AppleDouble
+.LSOverride
+
+# Parcel-bundler cache
+.cache/
+
+# eslint cache
+.eslintcache
+
+# Webpack output
+.webpack/
+
+# Storybook files
+.out/
+storybook-static/
+
+# Optional TypeScript specific files
+*.d.ts
+*.d.ts.map
