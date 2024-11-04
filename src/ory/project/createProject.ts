@@ -1,4 +1,6 @@
 const axios = require("axios");
+const fs = require("fs");
+const path = require("path");
 require("dotenv/config");
 
 // Set environment variables
@@ -11,13 +13,22 @@ if (!WORKSPACE_API_KEY || !WORKSPACE_ID) {
   );
 }
 
+// Get CLI arguments
+const [, , projectName, environment, homeRegion] = process.argv;
+
+if (!projectName || !environment || !homeRegion) {
+  throw new Error(
+    "Please provide name, environment (dev, stage, prod), and homeRegion as arguments."
+  );
+}
+
 // Define an async function to create a new ORY project
 async function createOryProject() {
   try {
     const projectData = {
-      name: "example",
-      environment: "dev",
-      home_region: "us-west",
+      name: projectName,
+      environment,
+      home_region: homeRegion,
       workspace_id: WORKSPACE_ID,
     };
 
@@ -31,6 +42,18 @@ async function createOryProject() {
         },
       }
     );
+
+    // Get ORY_PROJECT_ID from the response data
+    const ORY_PROJECT_ID = response.data.id;
+
+    // Define the output file path
+    const outputPath = path.join(
+      "src/ory/config",
+      `${projectData.environment}_${projectData.name}_${ORY_PROJECT_ID}.json`
+    );
+
+    // Write the response data to the JSON file
+    fs.writeFileSync(outputPath, JSON.stringify(response.data, null, 2));
 
     console.log("New project created successfully:", response.data);
   } catch (error) {

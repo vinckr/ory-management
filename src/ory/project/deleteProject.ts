@@ -1,14 +1,14 @@
 const axios = require("axios");
 require("dotenv/config");
 
+// Get ORY_PROJECT_ID from CLI arguments
+const ORY_PROJECT_ID = process.argv[2]; // Access the second argument
+
 // Set environment variables
-const ORY_PROJECT_ID = process.env.ORY_PROJECT_ID;
 const WORKSPACE_API_KEY = process.env.WORKSPACE_API_KEY;
 
 if (!ORY_PROJECT_ID || !WORKSPACE_API_KEY) {
-  throw new Error(
-    "ORY_PROJECT_ID and WORKSPACE_API_KEY must be set in environment variables."
-  );
+  throw new Error("ORY_PROJECT_ID and WORKSPACE_API_KEY must be set.");
 }
 
 // Define an async function to delete an ORY project
@@ -24,7 +24,7 @@ async function deleteOryProject() {
       }
     );
 
-    console.log("Project deleted successfully:", response.data);
+    console.log("Project deleted successfully.");
   } catch (error) {
     console.error("Error deleting ORY project:", error);
   }
